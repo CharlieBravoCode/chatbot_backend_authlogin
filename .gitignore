@@ -1,0 +1,21 @@
+# dependencies
+/node_modules
+
+# build output
+/build
+
+# logs and other runtime data
+/log
+/tmp
+*.log
+
+# testing and debugging files
+/.nyc_output
+/coverage
+/debug.log
+
+# environment variables
+/.env
+
+# misc
+.DS_Store
