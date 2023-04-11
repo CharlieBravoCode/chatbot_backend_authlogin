@@ -26,7 +26,7 @@ app.get("/", (req: express.Request, res: express.Response) => {
     });
 });
 
-app.use("/auth", loginRouter);
+app.use("/login", loginRouter);
 app.use("/auth", registerRouter);
 app.use("/", userDataRouter);
 
