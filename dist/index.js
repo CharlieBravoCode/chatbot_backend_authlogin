@@ -34,6 +34,6 @@ app.use("/", routes_1.userDataRouter);
 // httpsServer.listen(port, () => {
 //     console.log(`Listening at: https://0.0.0.0:${port}/`);
 // });
-app.listen(port, "0.0.0.0", () => {
-    console.log(`Listening at: http://0.0.0.0:${port}`);
+app.listen(port, () => {
+    console.log(`Listening at Port: ${port}`);
 });
