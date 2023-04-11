@@ -1,0 +1,8 @@
+{
+    "host": "localhost",
+    "user": "root",
+    "password": "4ogin4uigneounegu!WW",
+    "database": "chatbotApp",
+    "waitForConnections": true,
+    "connectionLimit": 10
+}
