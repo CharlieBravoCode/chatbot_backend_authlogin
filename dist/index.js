@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
         message: "OK"
     });
 });
-app.use("/login", routes_1.loginRouter);
+app.use("/auth", routes_1.loginRouter);
 app.use("/auth", routes_1.registerRouter);
 app.use("/", routes_1.userDataRouter);
 // Code block to create HTTPS Server

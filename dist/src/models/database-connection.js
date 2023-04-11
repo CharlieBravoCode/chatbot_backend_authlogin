@@ -19,7 +19,7 @@ class DatabaseConnection {
         return __awaiter(this, void 0, void 0, function* () {
             let conn;
             try {
-                // Aquire a database connection and return it to the caller
+                // Acquire a database connection and return it to the caller
                 return yield DatabaseConnection.connectionPool.getConnection(); // Note: manually release the connection after use.
             }
             catch (err) {
@@ -29,5 +29,8 @@ class DatabaseConnection {
         });
     }
 }
-DatabaseConnection.connectionPool = promise_1.default.createPool(db_config_json_1.default);
+DatabaseConnection.connectionPool = promise_1.default.createPool(Object.assign(Object.assign({}, db_config_json_1.default), { ssl: {
+        // Provide the minimal SSL configuration
+        rejectUnauthorized: false,
+    } }));
 exports.default = DatabaseConnection;
