@@ -9,7 +9,7 @@ import { loginRouter, registerRouter, userDataRouter } from "./src/routers/route
 
 const app = express();
 
-const port = 1234;
+const port = 8080;
 
 // app.use(bodyParser.text({
 //     type: "*/*"

@@ -10,7 +10,7 @@ const express_1 = __importDefault(require("express"));
 // Router imports
 const routes_1 = require("./src/routers/routes");
 const app = (0, express_1.default)();
-const port = 1234;
+const port = 8080;
 // app.use(bodyParser.text({
 //     type: "*/*"
 // }));
