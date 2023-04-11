@@ -1,8 +1,8 @@
 {
-    "host": "https://chatapp-do-user-11807274-0.b.db.ondigitalocean.com:25060",
+    "host": "chatapp-do-user-11807274-0.b.db.ondigitalocean.com:25060",
     "username": "doadmin",
     "password": "AVNS_FFd9MrF_c8pL5p-YoeF",
-    "database": "defaultdb",
+    "database": "defaultdb?ssl-mode=REQUIRED",
     "waitForConnections": true,
     "connectionLimit": 10
 }
