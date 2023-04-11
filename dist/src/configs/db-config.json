@@ -1,8 +1,8 @@
 {
-    "host": "localhost",
-    "user": "root",
-    "password": "4ogin4uigneounegu!WW",
-    "database": "chatbotApp",
+    "host": "chatapp-do-user-11807274-0.b.db.ondigitalocean.com",
+    "user": "doadmin",
+    "password": "AVNS_FFd9MrF_c8pL5p-YoeF",
+    "database": "defaultdb",
     "waitForConnections": true,
     "connectionLimit": 10
 }
