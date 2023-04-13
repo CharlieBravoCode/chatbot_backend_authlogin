@@ -1,10 +1,9 @@
 {
-    "host": "chatapp-do-user-11807274-0.b.db.ondigitalocean.com",
-    "port": 25060,
-    "user": "doadmin",
+    "host": "34.91.42.252",
+    "port": 3306,
+    "user": "root",
     "password": "AVNS_FFd9MrF_c8pL5p-YoeF",
-    "database": "defaultdb",
+    "database": "chatapp",
     "waitForConnections": true,
-    "connectionLimit": 10,
-    "connectTimeout": 30000 
+    "connectionLimit": 10
 }
