@@ -3,6 +3,7 @@
 
 # build output
 /build
+/dist
 
 # logs and other runtime data
 /log
