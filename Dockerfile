@@ -20,4 +20,5 @@ RUN npm run build
 FROM base AS production
 COPY --from=build /usr/src/app/dist ./dist
 EXPOSE 8080
+EXPOSE 3306
 CMD ["npm", "run", "start:prod"]
