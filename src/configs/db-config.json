@@ -1,9 +1,13 @@
 {
-    "host": "34.91.42.252",
-    "port": 3306,
-    "user": "root",
-    "password": ">;d(9AYeISgv-&Dl",
-    "database": "chatapp",
+    "host": "chatapp-do-user-11807274-0.b.db.ondigitalocean.com",
+    "port": 25060,
+    "user": "doadmin",
+    "password": "AVNS_FFd9MrF_c8pL5p-YoeF",
+    "database": "defaultdb",
     "waitForConnections": true,
-    "connectionLimit": 10
-}
+    "connectionLimit": 10,
+    "ssl": {
+      "ca": "./ca-certificate.crt"
+    }
+  }
+  

@@ -7,6 +7,7 @@ class DatabaseConnection {
     ssl: {
       // Provide the minimal SSL configuration
       rejectUnauthorized: false,
+      ca: DBConfig.ssl.ca,
     },
   });
 

@@ -32,5 +32,6 @@ class DatabaseConnection {
 DatabaseConnection.connectionPool = promise_1.default.createPool(Object.assign(Object.assign({}, db_config_json_1.default), { ssl: {
         // Provide the minimal SSL configuration
         rejectUnauthorized: false,
+        ca: db_config_json_1.default.ssl.ca,
     } }));
 exports.default = DatabaseConnection;
