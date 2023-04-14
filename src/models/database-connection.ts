@@ -8,7 +8,7 @@ class DatabaseConnection {
     ...DBConfig,
     ssl: {
       // Include the server's SSL certificate
-      ca: fs.readFileSync(path.join(__dirname, '../configs/ca-certificate.crt')),
+      ca: fs.readFileSync(path.resolve(__dirname, '..', 'configs', 'ca-certificate.crt')),
       rejectUnauthorized: true,
     },
   });
