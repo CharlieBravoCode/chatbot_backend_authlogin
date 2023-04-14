@@ -14,6 +14,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const promise_1 = __importDefault(require("mysql2/promise"));
 const db_config_json_1 = __importDefault(require("../configs/db-config.json"));
+const fs_1 = __importDefault(require("fs"));
+const path_1 = __importDefault(require("path"));
 class DatabaseConnection {
     static create() {
         return __awaiter(this, void 0, void 0, function* () {
@@ -30,7 +32,8 @@ class DatabaseConnection {
     }
 }
 DatabaseConnection.connectionPool = promise_1.default.createPool(Object.assign(Object.assign({}, db_config_json_1.default), { ssl: {
-        // Provide the minimal SSL configuration
-        rejectUnauthorized: false,
+        // Include the server's SSL certificate
+        ca: fs_1.default.readFileSync(path_1.default.join(__dirname, '../configs/ca-certificate.crt')),
+        rejectUnauthorized: true,
     } }));
 exports.default = DatabaseConnection;

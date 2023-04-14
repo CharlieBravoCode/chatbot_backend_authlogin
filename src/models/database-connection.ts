@@ -1,12 +1,15 @@
 import mysql from "mysql2/promise";
 import DBConfig from "../configs/db-config.json";
+import fs from "fs";
+import path from "path";
 
 class DatabaseConnection {
   private static connectionPool = mysql.createPool({
     ...DBConfig,
     ssl: {
-      // Provide the minimal SSL configuration
-      rejectUnauthorized: false,
+      // Include the server's SSL certificate
+      ca: fs.readFileSync(path.join(__dirname, '../configs/ca-certificate.crt')),
+      rejectUnauthorized: true,
     },
   });
 
