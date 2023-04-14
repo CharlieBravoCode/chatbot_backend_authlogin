@@ -1,13 +1,18 @@
 import mysql from "mysql2/promise";
 import DBConfig from "../configs/db-config.json";
+import fs from "fs";
+
+const caCertificate = fs.readFileSync(DBConfig.ssl.ca).toString();
 
 class DatabaseConnection {
   private static connectionPool = mysql.createPool({
     ...DBConfig,
     ssl: {
       // Provide the minimal SSL configuration
-      rejectUnauthorized: true,
-      ca: DBConfig.ssl.ca,
+      rejectUnauthorized: false,
+      ca: caCertificate,
+      // Specify the list of allowed ciphers
+      ciphers: "TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384"
     },
   });
 
