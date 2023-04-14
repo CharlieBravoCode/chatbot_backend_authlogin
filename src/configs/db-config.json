@@ -1,5 +1,5 @@
 {
-    "socketPath": "chatbot-382814:europe-west4:chatbotdb",
+    "host": "34.91.42.252",
     "port": 3306,
     "user": "root",
     "password": ">;d(9AYeISgv-&Dl",
